@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import ServiceBG from "../../../assets/images/service_bg.png";
 import GetStartedBG from "../../../assets/images/get_started_bg.png";
+import SecondShotBG from "../../../assets/images/second_shot_bg.png";
 
 import { COLORS } from "../../../settings";
 
@@ -29,6 +30,9 @@ export const Splash = styled.section`
   img {
     border-radius: 16px;
     width: calc(100% - 10px);
+
+    box-shadow: 0px 12px 16px 4px rgba(151, 71, 255, 0.1);
+    border-radius: 8px;
   }
 
   #splash_header {
@@ -40,7 +44,18 @@ export const Splash = styled.section`
 
     div {
       box-sizing: border-box;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    #highlight_logo {
+      height: 100px;
+      width: 100px;
+      margin: 0px auto;
+      margin-bottom: 60px;
+      display: block;
+      background: none;
+      box-shadow: none;
     }
 
     h2 {
@@ -49,6 +64,8 @@ export const Splash = styled.section`
       line-height: 54px;
       font-weight: 900;
       color: ${COLORS.primary};
+
+      margin: 0px 0px 20px 0px;
     }
 
     h1 {
@@ -62,11 +79,13 @@ export const Splash = styled.section`
       color: ${COLORS.primary};
 
       text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+      margin: 0;
+      margin-bottom: 20px;
     }
 
     #inclusive_blur {
       position: absolute;
-      top: 250px;
+      top: 300px;
       font-family: "Libre Baskerville";
       font-style: normal;
       font-weight: 700;
@@ -78,7 +97,7 @@ export const Splash = styled.section`
 
       color: #242d38;
 
-      opacity: 0.1;
+      opacity: 0.05;
       filter: blur(2px);
     }
 
@@ -88,12 +107,14 @@ export const Splash = styled.section`
       font-weight: 400;
       font-size: 20px;
       line-height: 24px;
-      text-align: center;
-      letter-spacing: 0.13em;
+      text-align: justify;
+      letter-spacing: 0.1em;
+
+      margin: 8px 0px 32px 0px;
 
       color: #330075;
 
-      text-shadow: 0px 32px 8px rgba(51, 0, 117, 0.17);
+      text-shadow: 0px 32px 8px rgba(51, 0, 117, 0.01);
     }
 
     #sign_up_container {
@@ -135,8 +156,8 @@ export const Services = styled.section`
     overflow-y: clip;
   }
   img {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     left: -100px;
     bottom: -135px;
@@ -148,7 +169,7 @@ export const Services = styled.section`
   }
 
   #service_copy {
-    width: 570px;
+    width: 500px;
     margin-left: auto;
     height: auto;
     justify-self: center;
@@ -161,12 +182,16 @@ export const Services = styled.section`
       /* or 40px */
 
       text-align: justify;
-      letter-spacing: -0.11em;
     }
   }
 `;
 
 export const SecondShot = styled.section`
+  background: url(${SecondShotBG});
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   img {
     width: 700px;
     height: 480px;
@@ -184,6 +209,8 @@ export const SecondShot = styled.section`
     }
   }
   #second_shot_copy {
+    width: max-content;
+
     h3 {
       font-family: "Montserrat";
       font-style: normal;
@@ -196,8 +223,7 @@ export const SecondShot = styled.section`
 
       color: #242d38;
 
-      text-shadow: 8px 32px 8px rgba(246, 191, 84, 0.02),
-        5px 32px 2px rgba(39, 49, 61, 0.1);
+      text-shadow: 5px 32px 2px rgba(200, 218, 241, 0.05);
       backdrop-filter: blur(36px);
     }
   }
@@ -213,8 +239,7 @@ export const SecondShot = styled.section`
     color: #07a0c3;
 
     opacity: 0.9;
-    text-shadow: 8px 32px 8px rgba(246, 191, 84, 0.02),
-      5px 32px 2px rgba(39, 49, 61, 0.05);
+    text-shadow: 5px 32px 2px rgba(200, 218, 241, 0.05);
     backdrop-filter: blur(36px);
   }
 `;
@@ -335,10 +360,19 @@ export const GetStarted = styled.section`
 `;
 
 export const Testimonial = styled.section`
+  padding-top: 50px !important;
+  box-sizing: border-box;
   position: relative;
-  #large_weird_man {
+  height: 650px;
+  #testimonial_image {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 `;
+
+export const Resources = styled.section``;

@@ -5,6 +5,7 @@ import SplashImage from '../../../assets/images/splash.jpg';
 import DiversityWomen from '../../../assets/images/diversity_women.png';
 import ServiceImg from '../../../assets/images/service_img.png';
 import CaptionedLogo from '../../../assets/images/gibra_logo_captioned_white.png';
+import HighlightLogo from '../../../assets/images/Logo_SVG.png';
 import GetStartedLeft from '../../../assets/images/get_started_left.png';
 import GetStartedRight from '../../../assets/images/get_started_right.png';
 import Engineer from '../../../assets/images/engineer.PNG';
@@ -22,6 +23,9 @@ const HomeLayout = function ({props}) {
             </Grid>
             <Grid item xs={12} md={4}>
                 <div id="splash_header">
+                    <div id="splash_logo">
+                        <img src={HighlightLogo} alt="" id="highlight_logo" />
+                    </div>  
                     <div>
                         <h2>Including</h2>
                         <h1>Diversity</h1>
@@ -30,12 +34,12 @@ const HomeLayout = function ({props}) {
                     </div>
                     <div id="splash_text">
                         <p>
-                            We offer a customized bouquet of Diversity, Equity, and Inclusion services to support you in creating a more inclusive workplace.
+                            We offer a customized bouquet of <strong>Diversity, Equity, and Inclusion</strong> services that create <strong>inclusive</strong> workspaces and enhance collaboration across team members!
                         </p>
                     </div>
                     <div id="sign_up_container">
                         <input type="text" id="signup_newsletter" placeholder='Your email address' />
-                        <button type='submit'>SIGN ME UP  i. </button>
+                        <button type='submit'>SIGN ME UP</button>
                     </div>
                 </div>
             </Grid>
@@ -44,14 +48,14 @@ const HomeLayout = function ({props}) {
         <SecondShot id="second_shot">
                         
         <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
                 <div id="second_shot_copy">
                     <h3>We are industry leaders in</h3>
                     <h2>DIVERSITY, EQUITY <br />AND INCLUSION<br />HIRING</h2>
                     <SiteButton StyleConfig={{"margin": "40px 0px 0px 0px", "borderRadius": "15px 0px"}}>Learn More</SiteButton>
                 </div>
             </Grid>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={7}>
                 <img src={DiversityWomen} alt="" />
             </Grid>
         </Grid>
@@ -67,7 +71,9 @@ const HomeLayout = function ({props}) {
                     <div id="service_copy">
                         <h3>OUR SERVICES</h3>
                         <h1>EDI Consulting</h1>
-                        <p>We are delighted to partner with you on your EDI journey. We understand that building an inclusive work culture can be challenging for an organization when there are inadequate resources or tools dedicated to DEI. Our dedicated and resourceful team members are available to provide you with the tools needed to be successful in your EDI efforts. </p>
+                        <p>
+                            We are delighted to partner with you on your EDI journey. Building an inclusive work culture sometimes be a challenge. Our DEI consultants are industry veterans and are available to support you in your journey to an inclusive workspace
+                        </p>
                         <SiteButton StyleConfig={{"margin": "40px 0px 0px 0px", "borderRadius": "15px 0px"}}>Learn More </SiteButton>
                     </div>
                 </Grid>
@@ -91,9 +97,9 @@ const HomeLayout = function ({props}) {
                             <span className="get_started_copy">
                                 <h3>Hiring</h3>
                                 <h6>
-                                     We can find you the right talent to push your organization forward.
+                                     Access our wide network of professionals who fit your requirements.
                                 </h6>
-                                <SiteButton StyleConfig={{"borderRadius": "0px 0px 0px 32px", "border": "1px solid #27313D", "background": "none"}}>Contact Gibra</SiteButton>
+                                <SiteButton StyleConfig={{"borderRadius": "0px 0px 0px 32px", "border": "1px solid #27313D", "background": "none"}}>Contact GibraWhite</SiteButton>
                             </span>
                             <img src={Engineer} alt="" />
                         </div>
@@ -102,16 +108,17 @@ const HomeLayout = function ({props}) {
                         <div className="get_started_copy get_started_div" id='get_started_training'>
                             <h3>Training</h3>
                             <h6>
-                                Teach your employees how best to work together in achieving success.
+                                Experience a curated curriculum designed to foster collaboration among teams.
                             </h6>
-                            <SiteButton StyleConfig={{"borderRadius": "0px 0px 32px 0px"}}>Get Started</SiteButton>
+                            <SiteButton StyleConfig={{"borderRadius": "0px 0px 32px 0px"}}>Begin</SiteButton>
                         </div>
                     </Grid>
                 </Grid>
             </Grid>
         </GetStarted>
         <Testimonial>
-
+            <img src={TestimonialImg} alt="" id="testimonial_image"/>
+            <h2>TOP COMPANIES <span id="header_prioritize">PRIORITIZE</span> DEI</h2>
         </Testimonial>
     </HomeLayoutWrapper>
 }
