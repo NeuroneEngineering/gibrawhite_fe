@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ServiceBG from "../../../assets/images/service_bg.png";
 import GetStartedBG from "../../../assets/images/get_started_bg.png";
 import SecondShotBG from "../../../assets/images/second_shot_bg.png";
+import TestimonialBG from "../../../assets/images/testimonial_bg.png";
 
 import { COLORS } from "../../../settings";
 
@@ -56,6 +57,11 @@ export const Splash = styled.section`
       display: block;
       background: none;
       box-shadow: none;
+
+      @media (max-width: 1000px) {
+        margin-bottom: 32px;
+        margin-top: 32px;
+      }
     }
 
     h2 {
@@ -66,6 +72,10 @@ export const Splash = styled.section`
       color: ${COLORS.primary};
 
       margin: 0px 0px 20px 0px;
+
+      @media (max-width: 500px) {
+        text-align: center;
+      }
     }
 
     h1 {
@@ -74,7 +84,7 @@ export const Splash = styled.section`
       font-weight: 400;
       font-size: 92px;
       line-height: 54px;
-      letter-spacing: 0.09em;
+      text-align: center;
 
       color: ${COLORS.primary};
 
@@ -107,7 +117,7 @@ export const Splash = styled.section`
       font-weight: 400;
       font-size: 20px;
       line-height: 24px;
-      text-align: justify;
+      text-align: center;
       letter-spacing: 0.1em;
 
       margin: 8px 0px 32px 0px;
@@ -120,13 +130,45 @@ export const Splash = styled.section`
     #sign_up_container {
       display: flex;
       flex-flow: row nowrap;
-      input {
-        width: calc(100% - 120px);
-        height: 70px;
-        background: #000000;
+      justify-content: space-between;
+      #signup_newsletter {
+        width: calc(100% - 125px);
+        height: 72px;
         opacity: 0.5;
-        border-radius: 8px 0px 0px 0px;
         display: inline-block;
+        border-bottom: solid 2px ${COLORS.primary};
+        position: relative;
+
+        input {
+          border-radius: 8px 0px 0px 0px;
+          height: 68px;
+          background: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          padding: 16px;
+          padding-top: 40px;
+          z-index: 1;
+          position: relative;
+
+          box-sizing: border-box;
+
+          font-size: 16px;
+          font-family: Montserrat;
+          color: ${COLORS.contrast.white};
+
+          &:placeholder {
+            color: ${COLORS.contrast.white};
+          }
+        }
+
+        p {
+          position: absolute;
+          top: 0px;
+          left: 16px;
+          font-size: 12px;
+          font-family: Work Sans;
+          z-index: 2;
+          color: ${COLORS.contrast.white};
+        }
       }
       button {
         width: 120px;
@@ -211,6 +253,21 @@ export const SecondShot = styled.section`
   #second_shot_copy {
     width: max-content;
 
+    @media (max-width: 500px) {
+      width: 100%;
+
+      text-align: center;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 32px;
+        letter-spacing: 0em;
+      }
+    }
+
     h3 {
       font-family: "Montserrat";
       font-style: normal;
@@ -251,6 +308,12 @@ export const GetStarted = styled.section`
   padding-top: 100px !important;
   box-sizing: border-box !important;
 
+  @media (max-width: 500px) {
+    height: auto;
+    background-repeat: no-repeat;
+    margin-bottom: 60px !important;
+  }
+
   #get_started_header {
     img {
       margin: 0 auto;
@@ -285,6 +348,19 @@ export const GetStarted = styled.section`
 
         opacity: 0.8;
       }
+
+      @media (max-width: 500px) {
+        img {
+          display: none;
+        }
+
+        h2 {
+          width: 100%;
+          font-size: 24px;
+          letter-spacing: 0em;
+          line-height: 24px;
+        }
+      }
     }
   }
 
@@ -298,6 +374,11 @@ export const GetStarted = styled.section`
 
       box-sizing: border-box;
       padding: 80px 40px;
+
+      @media (max-width: 500px) {
+        height: 500px;
+        padding: 40px;
+      }
     }
 
     .get_started_copy {
@@ -325,6 +406,18 @@ export const GetStarted = styled.section`
         line-height: 43px;
         margin: 0;
       }
+
+      @media (max-width: 500px) {
+        h6 {
+          font-size: 32px;
+          line-height: 40px;
+        }
+
+        h3 {
+          font-size: 48px;
+          line-height: 60px;
+        }
+      }
     }
 
     #get_started_hiring {
@@ -347,9 +440,15 @@ export const GetStarted = styled.section`
         right: 40px;
 
         box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.5);
+      }
 
-        @media (max-width: 1000px) {
+      @media (max-width: 1000px) {
+        img {
           display: none;
+        }
+
+        span {
+          width: 100%;
         }
       }
     }
@@ -364,13 +463,52 @@ export const Testimonial = styled.section`
   box-sizing: border-box;
   position: relative;
   height: 650px;
+
+  h2 {
+    #prioritize_blur {
+      position: absolute;
+      left: 0;
+      top: -100px;
+    }
+    span {
+      position: relative;
+      display: inline;
+      img {
+        position: absolute;
+        top: 40px;
+        left: 0px;
+      }
+    }
+  }
+
   #testimonial_image {
     position: absolute;
-    bottom: 0px;
+    bottom: -8px;
     right: 0px;
+
+    z-index: 2;
 
     @media (max-width: 1000px) {
       display: none;
+    }
+  }
+
+  #testimonial_container {
+    background: url(${TestimonialBG});
+    height: 400px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: inherit;
+
+    h3,
+    p {
+      margin: 0;
+      margin-bottom: 16px;
     }
   }
 `;

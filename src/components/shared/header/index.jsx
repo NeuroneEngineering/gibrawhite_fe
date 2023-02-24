@@ -4,43 +4,48 @@ import { HeaderStyles, HeaderWrapper, ULStyles } from './styles';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Grid, Link } from '@mui/material';
+import { Grid, Icon, Link } from '@mui/material';
 
 
 const Header = function ({page}) {
+
+    const [showMenu, setShowMenu] = React.useState(false);
 
     React.useEffect(()=>{
         AOS.init();
     }, [])
 
-    return <HeaderWrapper data-aos="slide-down" data-aos-duration="2000">
-        <Grid container spacing={4} justifyContent={'space-between'} alignItems={'center'}>
-            <Grid item xs={12} md={2}>
+    return <HeaderWrapper>
+        <Grid container height={'auto'} justifyContent={'space-between'} alignItems={'center'}>
+            <Grid item xs={12} sm={2}>
                 <div id="logo_container"></div>
             </Grid>
-            <Grid item xs={12} md={8}>       
+            <Grid item xs={12} sm={8}>       
                 <div id="link_tags">
-                    <Grid container spacing={0} justifyContent={'space-between'}>
-                        <Grid item xs={12} md={3}>
-                            <Link className="links" data-aos="fade-right" data-aos-duration="2000">HOME</Link>
+                    <Grid container columns={15} spacing={0} justifyContent={'space-between'}>
+                        <Grid item xs={15} sm={3}>
+                            <a className="links active" data-aos="fade-right" data-aos-duration="2000">HOME</a>
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Link className="links" data-aos="fade-right" data-aos-duration="2200">SERVICES</Link>                            
+                        <Grid item xs={15} sm={3}>
+                            <a className="links" data-aos="fade-left" data-aos-duration="1800">ABOUT US</a>
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Link className="links" data-aos="fade-left" data-aos-duration="2500">RESOURCES</Link>
+                        <Grid item xs={15} sm={3}>
+                            <a className="links" data-aos="fade-right" data-aos-duration="2200">SERVICES</a>                            
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Link className="links" data-aos="fade-left" data-aos-duration="1800">ABOUT US</Link>
+                        <Grid item xs={15} sm={3}>
+                            <a className="links" data-aos="fade-left" data-aos-duration="2500">RESOURCES</a>
+                        </Grid>
+                        <Grid item xs={15} sm={3}>
+                            <a className="links" data-aos="fade-left" data-aos-duration="1800">CONTACT US</a>
                         </Grid>
                     </Grid>
                 </div>
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid item xs={12} sm={2}>
                 <div id="social_links"></div>
             </Grid>
         </Grid>
-    </HeaderWrapper>
+        </HeaderWrapper>
 };
 
 export default Header;
