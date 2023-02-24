@@ -1,5 +1,7 @@
 import { Container, Grid } from '@mui/material';
-import React from 'react'
+import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import SplashImage from '../../../assets/images/splash.jpg';
 import DiversityWomen from '../../../assets/images/diversity_women.png';
@@ -14,38 +16,41 @@ import { Splash, SecondShot, Services, HomeLayoutWrapper, GetStarted, Testimonia
 import SiteButton from '../../shared/Buttons';
 
 const HomeLayout = function ({props}) {
-    return <HomeLayoutWrapper>
+    React.useEffect(()=>{
+        AOS.init();
+    }, [])
+    return <HomeLayoutWrapper data-aos="fade-in" data-aos-duration="2000">
         <Splash>
             
         <Grid container spacing={2}>
             <Grid item xs={12} md={8}>
-                <img  src={SplashImage} alt="" />
+                <img  src={SplashImage} alt="" data-aos="fade-up" data-aos-duration="2000" />
             </Grid>
             <Grid item xs={12} md={4}>
                 <div id="splash_header">
                     <div id="splash_logo">
-                        <img src={HighlightLogo} alt="" id="highlight_logo" />
+                        <img src={HighlightLogo} alt="" id="highlight_logo" data-aos="fade-left" data-aos-duration="3000" />
                     </div>  
                     <div>
-                        <h2>Including</h2>
-                        <h1>Diversity</h1>
+                        <h2 data-aos="slide-up" data-aos-duration="1000">Including</h2>
+                        <h1 data-aos="slide-up" data-aos-duration="2500">Diversity</h1>
 
-                        <span id="inclusive_blur">INCLUSIVE</span>
+                        <span id="inclusive_blur" data-aos="zoom-in" data-aos-duration="3000">INCLUSIVE</span>
                     </div>
                     <div id="splash_text">
-                        <p>
+                        <p data-aos="slide-up" data-aos-duration="2700">
                             We offer a customized bouquet of <strong>Diversity, Equity, and Inclusion</strong> services that create <strong>inclusive</strong> workspaces and enhance collaboration across team members!
                         </p>
                     </div>
                     <div id="sign_up_container">
                         <input type="text" id="signup_newsletter" placeholder='Your email address' />
-                        <button type='submit'>SIGN ME UP</button>
+                        <button type='submit' data-aos="fade-left" data-aos-duration="2000">SIGN ME UP</button>
                     </div>
                 </div>
             </Grid>
         </Grid>
         </Splash>
-        <SecondShot id="second_shot">
+        <SecondShot id="second_shot" data-aos="fade-up" data-aos-duration="2000">
                         
         <Grid container spacing={2}>
             <Grid item xs={12} md={5}>
@@ -56,25 +61,25 @@ const HomeLayout = function ({props}) {
                 </div>
             </Grid>
             <Grid item xs={12} md={7}>
-                <img src={DiversityWomen} alt="" />
+                <img src={DiversityWomen} alt=""  data-aos="fade-left" data-aos-duration="3000"/>
             </Grid>
         </Grid>
         </SecondShot>
-        <Services>
+        <Services data-aos="fade-in" data-aos-duration="1500">
             <Grid container spacing={2}>
                 <Grid item md={0} lg={4} id="service_img_grid">
                     <div id="service_image">
-                        <img src={ServiceImg} alt="" />
+                        <img src={ServiceImg} alt="" data-aos="slide-up" data-aos-duration="3000"/>
                     </div>
                 </Grid>
                 <Grid item xs={12} md={8} id="service_copy_grid">
                     <div id="service_copy">
-                        <h3>OUR SERVICES</h3>
-                        <h1>EDI Consulting</h1>
-                        <p>
+                        <h3 data-aos="fade-in" data-aos-duration="2000">OUR SERVICES</h3>
+                        <h1 data-aos="fade-in" data-aos-duration="2000">EDI Consulting</h1>
+                        <p data-aos="fade-left" data-aos-duration="2500">
                             We are delighted to partner with you on your EDI journey. Building an inclusive work culture sometimes be a challenge. Our DEI consultants are industry veterans and are available to support you in your journey to an inclusive workspace
                         </p>
-                        <SiteButton StyleConfig={{"margin": "40px 0px 0px 0px", "borderRadius": "15px 0px"}}>Learn More </SiteButton>
+                        <SiteButton data-aos="fade" data-aos-duration="3000" StyleConfig={{"margin": "40px 0px 0px 0px", "borderRadius": "15px 0px"}}>Learn More </SiteButton>
                     </div>
                 </Grid>
             </Grid>
