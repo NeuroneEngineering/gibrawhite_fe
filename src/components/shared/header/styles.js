@@ -1,5 +1,7 @@
 export const HeaderStyles = {
   boxSizing: "border-box",
+  position: "absolute",
+  top: "0",
 };
 
 export const ULStyles = {

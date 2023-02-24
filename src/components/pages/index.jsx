@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from '../shared/header';
 import Home from './Home'
-import { PageWrapper } from './styles';
+import { MainStyle, PageWrapper } from './styles';
 
 const IndexPage = function ({props}) {
-    return <PageWrapper>
+    return <div style={PageWrapper}>
         <Header />
-        <main>
+        <main style={MainStyle}>
             <Home />
         </main>
-    </PageWrapper>
+    </div>
 }
 
 export default IndexPage;
