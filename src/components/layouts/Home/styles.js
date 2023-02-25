@@ -4,6 +4,7 @@ import ServiceBG from "../../../assets/images/service_bg.png";
 import GetStartedBG from "../../../assets/images/get_started_bg.png";
 import SecondShotBG from "../../../assets/images/second_shot_bg.png";
 import TestimonialBG from "../../../assets/images/testimonial_bg.png";
+import SplashBG from "../../../assets/images/splash_jumbo_highlight.png";
 
 import { COLORS } from "../../../settings";
 
@@ -28,6 +29,7 @@ export const HomeLayoutWrapper = styled.div`
 
 export const Splash = styled.section`
   background-size: 100%;
+  background: url(${SplashBG});
   img {
     border-radius: 16px;
     width: calc(100% - 10px);
@@ -50,10 +52,10 @@ export const Splash = styled.section`
     }
 
     #highlight_logo {
-      height: 100px;
-      width: 100px;
+      height: 60px;
+      width: 60px;
       margin: 0px auto;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       display: block;
       background: none;
       box-shadow: none;
@@ -71,7 +73,42 @@ export const Splash = styled.section`
       font-weight: 900;
       color: ${COLORS.primary};
 
-      margin: 0px 0px 20px 0px;
+      text-align: center;
+
+      margin: 0px 0px 60px 0px;
+
+      transition: all 1s ease-in;
+
+      span {
+        display: inline-block;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      #incl {
+        color: #242d38;
+      }
+
+      #u {
+        transform: rotate(5.5deg);
+        top: 3px;
+      }
+
+      #din {
+        transform: rotate(12.2deg);
+        top: 14px;
+      }
+
+      #n {
+        transform: rotate(19.2deg);
+        top: 30px;
+      }
+
+      #g {
+        transform: rotate(35.2deg);
+        top: 50px;
+        left: -6px;
+      }
 
       @media (max-width: 500px) {
         text-align: center;
@@ -85,6 +122,10 @@ export const Splash = styled.section`
       font-size: 92px;
       line-height: 54px;
       text-align: center;
+
+      letter-spacing: 0.05em;
+
+      color: #9747ff;
 
       color: ${COLORS.primary};
 
@@ -465,18 +506,38 @@ export const Testimonial = styled.section`
   height: 650px;
 
   h2 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height */
+
+    letter-spacing: 0.14em;
+
+    color: #330075;
+
+    text-shadow: 32px 16px 5px rgba(246, 191, 84, 0.1),
+      8px 32px 8px rgba(246, 191, 84, 0.02), 5px 32px 2px rgba(39, 49, 61, 0.05);
+    backdrop-filter: blur(36px);
     #prioritize_blur {
       position: absolute;
       left: 0;
       top: -100px;
+    }
+
+    #yellow {
+      color: #f6bf54;
     }
     span {
       position: relative;
       display: inline;
       img {
         position: absolute;
-        top: 40px;
-        left: 0px;
+        top: 60px;
+        left: 15%;
+        width: 70%;
+        margin: 0 auto;
       }
     }
   }

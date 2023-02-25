@@ -14,4 +14,11 @@ export const ButtonWrapper = styled.button`
   border: ${({ border }) => (border ? border : "none")};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? borderRadius : "none"};
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
 `;

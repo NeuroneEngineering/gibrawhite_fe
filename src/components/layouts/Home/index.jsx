@@ -17,6 +17,7 @@ import PrioritizeSVG from '../../../assets/images/prioritize_stroke.svg';
 import PrioritizeBlur from '../../../assets/images/prioritize_header_blur_bg.png';
 import { Splash, SecondShot, Services, HomeLayoutWrapper, GetStarted, Testimonial, Resources } from './styles';
 import SiteButton from '../../shared/Buttons';
+import { COLORS } from '../../../settings';
 
 const HomeLayout = function ({props}) {
     React.useEffect(()=>{
@@ -35,7 +36,13 @@ const HomeLayout = function ({props}) {
                         <img src={HighlightLogo} alt="" id="highlight_logo" data-aos="fade-up" data-aos-duration="3000" data-aos-distance="8px" data-aos-easing="ease-out" />
                     </div>  
                     <div>
-                        <h2 data-aos="slide-up" data-aos-duration="1000">Including</h2>
+                        <h2>
+                            <span data-aos="slide-left" data-aos-duration="1000" id="incl">Incl</span>
+                            <span data-aos="slide-left" data-aos-duration="2000" id="u" >u</span>
+                            <span data-aos="slide-left" data-aos-duration="2500" id="din" >di</span>
+                            <span data-aos="slide-left" data-aos-duration="2800" id="n" >n</span>
+                            <span data-aos="slide-left" data-aos-duration="3000" id="g" >g</span>
+                        </h2>
                         <h1 data-aos="slide-up" data-aos-duration="2500">Diversity</h1>
 
                         <span id="inclusive_blur" data-aos="zoom-in" data-aos-duration="3000">INCLUSIVE</span>
@@ -110,7 +117,7 @@ const HomeLayout = function ({props}) {
                                 <h6>
                                      Access our wide network of professionals who fit your requirements.
                                 </h6>
-                                <SiteButton StyleConfig={{"borderRadius": "0px 0px 0px 32px", "border": "1px solid #27313D", "background": "none"}}>Contact GibraWhite</SiteButton>
+                                <SiteButton StyleConfig={{"borderRadius": "0px 0px 0px 32px", "border": "1px solid #27313D", "background": "none", "color": COLORS.contrast.dark}}>Contact GibraWhite</SiteButton>
                             </span>
                             <img src={Engineer} alt="" />
                         </div>
@@ -131,7 +138,7 @@ const HomeLayout = function ({props}) {
             <img src={TestimonialImg} alt="" id="testimonial_image"/>
             <h2>
                 <img src={PrioritizeBlur} id="prioritize_blur" />
-                TOP COMPANIES <span id="header_prioritize">PRIORITIZE <img data-aos="slide-up" data-aos-duration="500" src={PrioritizeSVG}></img></span> DEI
+                TOP COMPANIES <span id="header_prioritize">PRIORITIZE <img data-aos="slide-up" data-aos-duration="500" src={PrioritizeSVG}></img></span> <span id="yellow">DEI</span>
             </h2>
             <div id="testimonial_container">
                 <h3>"</h3>
