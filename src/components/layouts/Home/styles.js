@@ -8,6 +8,12 @@ import SplashBG from "../../../assets/images/splash_jumbo_highlight.png";
 
 import { COLORS } from "../../../settings";
 
+export const Incl = styled.span``;
+export const U = styled.span``;
+export const Di = styled.span``;
+export const N = styled.span``;
+export const G = styled.span``;
+
 export const HomeLayoutWrapper = styled.div`
   box-sizing: border-box;
 
@@ -90,8 +96,7 @@ export const Splash = styled.section`
       }
 
       #u {
-        transform: rotate(5.5deg);
-        top: 3px;
+        transition: all 0.25s ease-in-out;
       }
 
       #din {
@@ -115,6 +120,12 @@ export const Splash = styled.section`
       }
     }
 
+    .h1_line {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
     h1 {
       font-family: Abril Fatface;
       font-style: normal;
@@ -124,6 +135,7 @@ export const Splash = styled.section`
       text-align: center;
 
       letter-spacing: 0.05em;
+      display: inline-block;
 
       color: #9747ff;
 
@@ -223,6 +235,36 @@ export const Services = styled.section`
   background: url(${ServiceBG});
   height: 760px;
   margin-bottom: 0px !important;
+
+  h3 {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height */
+
+    letter-spacing: 0.035em;
+
+    color: #242d38;
+
+    opacity: 0.8;
+
+    margin: 0;
+  }
+
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 78px;
+    /* identical to box height */
+
+    color: #07a0c3;
+
+    margin: 0;
+  }
 
   #service_img_grid {
     @media (max-width: 1000px) {

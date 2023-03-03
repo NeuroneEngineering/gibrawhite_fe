@@ -15,13 +15,28 @@ import TestimonialImg from '../../../assets/images/testimonial_img.png';
 import ResourcesImage from '../../../assets/images/resources_image.png';
 import PrioritizeSVG from '../../../assets/images/prioritize_stroke.svg';
 import PrioritizeBlur from '../../../assets/images/prioritize_header_blur_bg.png';
-import { Splash, SecondShot, Services, HomeLayoutWrapper, GetStarted, Testimonial, Resources } from './styles';
+import { Splash, SecondShot, Services, HomeLayoutWrapper, GetStarted, Testimonial, Resources, Incl, U, Di, N, G } from './styles';
 import SiteButton from '../../shared/Buttons';
 import { COLORS } from '../../../settings';
 
 const HomeLayout = function ({props}) {
+
+    const inclRef = React.useRef(null);
+    const uRef = React.useRef(null);
+    const diRef = React.useRef(null);
+    const nRef = React.useRef(null);
+    const gRef = React.useRef(null);
+
+    let refArr = [inclRef, uRef, diRef, nRef, gRef];
     React.useEffect(()=>{
         AOS.init();
+
+        let u = uRef.current;
+        
+        setTimeout(()=>{
+            u.style.transform = "rotate(5.5deg)";
+            u.style.top="3px";
+        }, 1900)
     }, [])
     return <HomeLayoutWrapper data-aos="fade-in" data-aos-duration="2000">
         <Splash>
@@ -37,19 +52,20 @@ const HomeLayout = function ({props}) {
                     </div>  
                     <div>
                         <h2>
-                            <span data-aos="slide-left" data-aos-duration="1000" id="incl">Incl</span>
-                            <span data-aos="slide-left" data-aos-duration="2000" id="u" >u</span>
-                            <span data-aos="slide-left" data-aos-duration="2500" id="din" >di</span>
-                            <span data-aos="slide-left" data-aos-duration="2800" id="n" >n</span>
-                            <span data-aos="slide-left" data-aos-duration="3000" id="g" >g</span>
+                            <Incl  ref={inclRef} data-aos="slide-right" data-aos-duration="1000" id="incl">Incl</Incl>
+                            <U  ref={uRef} data-aos="slide-left" data-aos-duration="2000" id="u" >u</U>
+                            <Di  ref={diRef} data-aos="slide-left" data-aos-duration="2500" id="din" >di</Di>
+                            <N  ref={nRef} data-aos="slide-left" data-aos-duration="2800" id="n" >n</N>
+                            <G  ref={gRef} data-aos="slide-left" data-aos-duration="3000" id="g" >g</G>
                         </h2>
-                        <h1 data-aos="slide-up" data-aos-duration="2500">Diversity</h1>
-
+                        <div className="h1_line">
+                            <h1 data-aos="slide-up" data-aos-duration="500">Di</h1> <h1 data-aos="slide-up" data-aos-duration="800">ver</h1> <h1 data-aos="slide-up" data-aos-duration="1600">sit</h1> <h1 data-aos="slide-up" data-aos-duration="2800">y</h1>
+                        </div>
                         <span id="inclusive_blur" data-aos="zoom-in" data-aos-duration="3000">INCLUSIVE</span>
                     </div>
                     <div id="splash_text">
                         <p data-aos="slide-up" data-aos-duration="1700">
-                            We offer a customized bouquet of <strong>Diversity, Equity, and Inclusion</strong> services that create <strong>inclusive</strong> workspaces and enhance collaboration across team members!
+                            We offer a customized bouquet of <strong>Diversity, Equity, and Inclusion</strong> services that create <strong>inclusive</strong> workspaces and enhance CDcollaboration across team members!
                         </p>
                     </div>
                     <div id="sign_up_container"  data-aos="slide-up" data-aos-duration="200">

@@ -15,7 +15,7 @@ const Header = function ({page}) {
         AOS.init();
     }, [])
 
-    return <HeaderWrapper>
+    return <HeaderWrapper>  
         <Grid container height={'auto'} justifyContent={'space-between'} alignItems={'center'}>
             <Grid item xs={12} sm={2}>
                 <div id="logo_container"></div>

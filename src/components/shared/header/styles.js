@@ -50,8 +50,7 @@ export const HeaderWrapper = styled.header`
       font-family: Libre Baskerville;
       width: 100%;
       color: ${COLORS.secondary};
-      opacity: 0.1;
-      transition: all 0.25s ease-in;
+      opacity: 0.6;
     }
 
     @media (max-width: 600px) {
