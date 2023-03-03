@@ -34,8 +34,7 @@ const HomeLayout = function ({props}) {
         let u = uRef.current;
         
         setTimeout(()=>{
-            u.style.transform = "rotate(5.5deg)";
-            u.style.top="3px";
+            
         }, 1900)
     }, [])
     return <HomeLayoutWrapper data-aos="fade-in" data-aos-duration="2000">

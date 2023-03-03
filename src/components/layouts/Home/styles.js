@@ -96,23 +96,16 @@ export const Splash = styled.section`
       }
 
       #u {
-        transition: all 0.25s ease-in-out;
+        transition: all 1.25s ease-in-out;
       }
 
       #din {
-        transform: rotate(12.2deg);
-        top: 14px;
       }
 
       #n {
-        transform: rotate(19.2deg);
-        top: 30px;
       }
 
       #g {
-        transform: rotate(35.2deg);
-        top: 50px;
-        left: -6px;
       }
 
       @media (max-width: 500px) {
