@@ -130,9 +130,7 @@ export const Splash = styled.section`
       letter-spacing: 0.05em;
       display: inline-block;
 
-      color: #9747ff;
-
-      color: ${COLORS.primary};
+      color: #242d38;
 
       text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
       margin: 0;
@@ -185,26 +183,26 @@ export const Splash = styled.section`
         border-bottom: solid 2px ${COLORS.primary};
         position: relative;
 
-        input {
-          border-radius: 8px 0px 0px 0px;
-          height: 68px;
-          background: rgba(0, 0, 0, 0.5);
-          width: 100%;
-          padding: 16px;
-          padding-top: 40px;
-          z-index: 1;
-          position: relative;
+        // input {
+        //   border-radius: 8px 0px 0px 0px;
+        //   height: 68px;
+        //   background: rgba(0, 0, 0, 0.5);
+        //   width: 100%;
+        //   padding: 16px;
+        //   padding-top: 40px;
+        //   z-index: 1;
+        //   position: relative;
 
-          box-sizing: border-box;
+        //   box-sizing: border-box;
 
-          font-size: 16px;
-          font-family: Montserrat;
-          color: ${COLORS.contrast.white};
+        //   font-size: 16px;
+        //   font-family: Montserrat;
+        //   color: ${COLORS.contrast.white};
 
-          &:placeholder {
-            color: ${COLORS.contrast.white};
-          }
-        }
+        //   &:placeholder {
+        //     color: ${COLORS.contrast.white};
+        //   }
+        // }
 
         p {
           position: absolute;
