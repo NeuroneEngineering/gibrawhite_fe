@@ -72,7 +72,7 @@ const HomeLayout = function ({props}) {
                             <p>SIGN UP FOR OUR NEWSLETTER</p>
                             <input type="email" placeholder='Your email address'/>
                         </span>
-                        <button type='submit' data-aos="fade-left" data-aos-duration="1000">SIGN ME UP</button>
+                        <SiteButton StyleConfig={{"margin": "40px 0px 0px 0px", "borderRadius": "15px 0px"}}>Sign Me Up</SiteButton>
                     </div>
                 </div>
             </Grid>
@@ -132,7 +132,7 @@ const HomeLayout = function ({props}) {
                                 <h6>
                                      Access our wide network of professionals who fit your requirements.
                                 </h6>
-                                <SiteButton StyleConfig={{"borderRadius": "0px 0px 0px 32px", "border": "1px solid #27313D", "background": "none", "color": COLORS.contrast.dark}}>Contact GibraWhite</SiteButton>
+                                <SiteButton StyleConfig={{"borderRadius": "0px 0px 0px 32px", "border": "1px solid #27313D", "background": "none", "color": COLORS.contrast.dark}}>Search</SiteButton>
                             </span>
                             <img src={Engineer} alt="" />
                         </div>

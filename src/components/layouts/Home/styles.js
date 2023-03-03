@@ -89,6 +89,7 @@ export const Splash = styled.section`
         display: inline-block;
         box-sizing: border-box;
         position: relative;
+        color: #242d38;
       }
 
       #incl {
