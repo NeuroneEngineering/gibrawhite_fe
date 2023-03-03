@@ -77,8 +77,7 @@ export const Splash = styled.section`
       font-size: 68px;
       line-height: 54px;
       font-weight: 900;
-      color: ${COLORS.primary};
-
+      color: #242d38;
       text-align: center;
 
       margin: 0px 0px 60px 0px;
