@@ -18,7 +18,7 @@ export const ButtonWrapper = styled.button`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: ${({ fontSize }) => (fontSize ? fontSize : "16pz")};
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : "20px")};
   line-height: 29px;
   /* identical to box height */
 `;

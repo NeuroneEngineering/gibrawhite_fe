@@ -6,6 +6,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Grid, Icon, Link } from '@mui/material';
 
+import Hamburger from '../../../assets/icons/hamburger.svg'
+
 
 const Header = function ({page}) {
 
@@ -15,8 +17,15 @@ const Header = function ({page}) {
         AOS.init();
     }, [])
 
-    return <HeaderWrapper>  
-        <Grid container height={'auto'} justifyContent={'space-between'} alignItems={'center'}>
+    const toggleHeader = () => {
+        setShowMenu(curr => (!curr));
+        return;
+    };
+
+    return <HeaderWrapper showHeader={showMenu}>
+        <img id="hamburger" src={Hamburger} alt="" onClick={toggleHeader} />
+
+        <Grid id="md_header" container height={'auto'} justifyContent={'space-between'} alignItems={'center'}>
             <Grid item xs={12} sm={2}>
                 <div id="logo_container"></div>
             </Grid>

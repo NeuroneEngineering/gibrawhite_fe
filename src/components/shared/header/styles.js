@@ -10,6 +10,12 @@ export const HeaderWrapper = styled.header`
 
   padding: 0px 100px;
 
+  #hamburger {
+    display: none;
+    width: 60px;
+    height: 60px;
+  }
+
   @media (max-width: 1000px) {
     padding: 0px 50px;
   }
@@ -17,9 +23,18 @@ export const HeaderWrapper = styled.header`
     padding: 0px 30px;
   }
   @media (max-width: 600px) {
-    padding: 0px 20px;
+    padding: 50px 20px;
     position: relative;
     height: auto;
+
+    #hamburger {
+      display: block;
+      margin-left: auto;
+    }
+
+    #md_header {
+      display: ${({showHeader}) => showHeader ? 'block' : 'none'};
+    }
 
     div {
       padding-top: 0px !important;
