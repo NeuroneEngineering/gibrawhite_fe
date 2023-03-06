@@ -78,9 +78,9 @@ export const Splash = styled.section`
       line-height: 54px;
       font-weight: 900;
       color: #242d38;
-      text-align: center;
+      text-align: left;
 
-      margin: 0px 0px 60px 0px;
+      margin: 0px 0px 30px 0px;
 
       transition: all 1s ease-in;
 
@@ -122,12 +122,12 @@ export const Splash = styled.section`
     h1 {
       font-family: Abril Fatface;
       font-style: normal;
-      font-weight: 400;
-      font-size: 92px;
+      font-weight: 700;
+      font-size: 110px;
       line-height: 54px;
       text-align: center;
 
-      letter-spacing: 0.05em;
+      letter-spacing: -0.05em;
       display: inline-block;
 
       color: #242d38;
@@ -175,34 +175,46 @@ export const Splash = styled.section`
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
+      align-items: center;
+      height: 72px;
       #signup_newsletter {
         width: calc(100% - 125px);
-        height: 72px;
+        height: 100%;
         opacity: 0.5;
         display: inline-block;
         border-bottom: solid 2px ${COLORS.primary};
         position: relative;
 
-        // input {
-        //   border-radius: 8px 0px 0px 0px;
-        //   height: 68px;
-        //   background: rgba(0, 0, 0, 0.5);
-        //   width: 100%;
-        //   padding: 16px;
-        //   padding-top: 40px;
-        //   z-index: 1;
-        //   position: relative;
+        input {
+          border-radius: 8px 0px 0px 0px;
+          height: 68px;
+          background: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          padding: 4px 16px;
+          padding-top: 40px;
+          z-index: 1;
+          position: relative;
 
-        //   box-sizing: border-box;
+          box-sizing: border-box;
 
-        //   font-size: 16px;
-        //   font-family: Montserrat;
-        //   color: ${COLORS.contrast.white};
+          font-size: 16px;
+          font-family: Montserrat;
+          color: ${COLORS.contrast.white};
 
-        //   &:placeholder {
-        //     color: ${COLORS.contrast.white};
-        //   }
-        // }
+          &:placeholder {
+            color: ${COLORS.contrast.white};
+          }
+
+          &:after {
+            position: absolute;
+            background: white;
+            left: 25px;
+            width: 100%:
+            height: 100%;
+            display: block;
+          }
+        }
+
 
         p {
           position: absolute;
@@ -334,11 +346,13 @@ export const SecondShot = styled.section`
 
       h3 {
         font-size: 24px;
+        margin: 0;
       }
 
       h2 {
         font-size: 32px;
         letter-spacing: 0em;
+        margin: 0;
       }
     }
 
@@ -356,6 +370,8 @@ export const SecondShot = styled.section`
 
       text-shadow: 5px 32px 2px rgba(200, 218, 241, 0.05);
       backdrop-filter: blur(36px);
+      margin: 8px;
+      margin-bottom: 40px;
     }
   }
 
@@ -366,6 +382,7 @@ export const SecondShot = styled.section`
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 0.14em;
+    margin: 8px;
 
     color: #07a0c3;
 
@@ -538,6 +555,28 @@ export const Testimonial = styled.section`
   position: relative;
   height: 650px;
 
+  .blender {
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 1.56%,
+      #e1e7ef 33.85%,
+      rgba(130, 148, 158, 0) 75.52%,
+      rgba(0, 0, 0, 0) 83.33%
+    );
+    position: absolute;
+    left: 0;
+  }
+
+  #top_bld {
+    top: -66px;
+  }
+
+  #btm_bld {
+    bottom: -132px;
+  }
+
   h2 {
     font-family: "Lato";
     font-style: normal;
@@ -604,7 +643,166 @@ export const Testimonial = styled.section`
       margin: 0;
       margin-bottom: 16px;
     }
+
+    h3 {
+      font-family: "Libre Baskerville";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 60px;
+      letter-spacing: 0.11em;
+
+      color: #ffffff;
+    }
+
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 34px;
+      letter-spacing: 0.1em;
+
+      color: #ffffff;
+
+      width: 100%;
+      max-width: 840px;
+    }
+
+    #bottom_quote {
+      margin-top: 30px;
+    }
+
+    .center_text {
+      text-align: center;
+      display: block;
+    }
+
+    #designation {
+      font-family: 'Libre Baskerville';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 32px;
+letter-spacing: 0.11em;
+
+color: #FFFFFF;
+
+opacity: 0.3;
+    }
   }
 `;
 
-export const Resources = styled.section``;
+export const Resources = styled.section`
+
+#resources_img {
+  position: relative;
+
+
+  img {
+    height: 100%;
+  }
+  #modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+     box-sizing: border-box;
+    // background: linear-gradient(180deg, rgba(36, 45, 56, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(180deg, rgba(0, 53, 119, 0.3) 0%, rgba(127, 86, 7, 0.3) 100%), url(.jpg);
+/* gen_drop */
+
+    h4, p {
+      margin: 0px;
+    }
+
+    h4 {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: right;
+      letter-spacing: 0.14em;
+
+      /* Card Fill */
+
+      margin-bottom: 24px;
+      color: #F5F9FA;
+    }
+
+    p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: right;
+      letter-spacing: -0.04em;
+
+      color: #F5F9FA;
+      display: inherit;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      img {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+#resources_copy {
+  width: 100%;
+
+  p {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 151.9%;
+/* or 36px */
+
+letter-spacing: -0.04em;
+
+color: #330075;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+
+    text-align: center;
+
+    h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 32px;
+      letter-spacing: 0em;
+      margin: 0;
+    }
+  }
+
+  h3 {font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.14em;
+  
+  color: #07A0C3;
+  
+  opacity: 0.9;
+  text-shadow: 8px 32px 8px rgba(246, 191, 84, 0.02), 5px 32px 2px rgba(39, 49, 61, 0.05);
+  backdrop-filter: blur(36px);
+
+  span {
+    color: #EB5160;
+  }
+  }
+}
+`;

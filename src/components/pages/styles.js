@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const PageWrapper = {
-  boxSizing: "border-box",
-  // padding: "0px 50px",'
-  overflowX: "hidden",
-};
+export const PageWrapper = styled.div`
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+`
 
 export const Main = styled.main`
   padding-top: 200px;
