@@ -9,10 +9,26 @@ import SplashBG from "../../../assets/images/splash_jumbo_highlight.png";
 import { COLORS } from "../../../settings";
 
 export const Incl = styled.span``;
-export const U = styled.span``;
-export const Di = styled.span``;
-export const N = styled.span``;
-export const G = styled.span``;
+export const U = styled.span`
+    transition: all 0.5s ease-in-out;
+    transform: rotate(0deg);
+    color: ${COLORS.primary};
+`;
+export const Di = styled.span`
+    transition: all 1s ease-in-out;
+    transform: rotate(0deg);
+    color: ${COLORS.primary};
+`;
+export const N = styled.span`
+    transition: all 2s ease-in-out;
+    transform: rotate(0deg);
+    color: ${COLORS.primary};
+`;
+export const G = styled.span`
+    transition: all 3s ease-in-out;
+    transform: rotate(0deg);
+    color: ${COLORS.primary};
+`;
 
 export const HomeLayoutWrapper = styled.div`
   box-sizing: border-box;
@@ -46,6 +62,7 @@ export const Splash = styled.section`
 
   #splash_header {
     position: relative;
+    top: -50px;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -80,7 +97,7 @@ export const Splash = styled.section`
       color: #242d38;
       text-align: left;
 
-      margin: 0px 0px 30px 0px;
+      margin: 0px 0px 45px 0px;
 
       transition: all 1s ease-in;
 
@@ -100,12 +117,15 @@ export const Splash = styled.section`
       }
 
       #din {
+        color: ${COLORS.primary}
       }
 
       #n {
+        color: ${COLORS.primary}
       }
 
       #g {
+        color: ${COLORS.primary}
       }
 
       @media (max-width: 500px) {
@@ -135,6 +155,8 @@ export const Splash = styled.section`
       text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
       margin: 0;
       margin-bottom: 20px;
+      color: ${COLORS.primary};
+      
     }
 
     #inclusive_blur {
@@ -149,9 +171,9 @@ export const Splash = styled.section`
 
       letter-spacing: -0.075em;
 
-      color: #242d38;
+      color: ${COLORS.primary};
 
-      opacity: 0.05;
+      opacity: 0.1;
       filter: blur(2px);
     }
 
@@ -170,15 +192,46 @@ export const Splash = styled.section`
 
       text-shadow: 0px 32px 8px rgba(51, 0, 117, 0.01);
     }
-
+      
+    #signup_btn {
+        width: 100px;
+        height: 52px;
+        
+        #signup_btn_text {
+            position: absolute;
+            z-index: 1000000;
+            top: 20px;
+            right: -10px;
+            
+            p {
+                color: white;
+                font-size: 10px;
+                margin: 0px;
+                line-height: 14px;
+            }
+                
+            #up_group {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                img {
+                    display: inline-block;
+                    height: 8px;
+                    width: 16px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    
     #sign_up_container {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
+      height: 52px;
       #signup_newsletter {
-        width: calc(100% - 125px);
+        width: calc(100% - 115px);
         height: 100%;
         opacity: 0.5;
         display: inline-block;
@@ -187,18 +240,18 @@ export const Splash = styled.section`
 
         input {
           border-radius: 8px 0px 0px 0px;
-          height: 68px;
-          background: rgba(0, 0, 0, 0.5);
+          height: 52px;
+          background: rgba(0, 0, 0, 0.8);
           width: 100%;
-          padding: 4px 16px;
-          padding-top: 40px;
+          padding: 4px 12px;
+          padding-top: 30px;
           z-index: 1;
           position: relative;
 
           box-sizing: border-box;
 
           font-size: 16px;
-          font-family: Montserrat;
+          font-family: Libre Braskerville;
           color: ${COLORS.contrast.white};
 
           &:placeholder {
@@ -218,9 +271,11 @@ export const Splash = styled.section`
 
         p {
           position: absolute;
-          top: 0px;
+          top: -5px;
           left: 16px;
-          font-size: 12px;
+          font-size: 10px;
+          letter-spacing: 0px;
+          font-weight: bold;
           font-family: Work Sans;
           z-index: 2;
           color: ${COLORS.contrast.white};
@@ -369,7 +424,6 @@ export const SecondShot = styled.section`
       color: #242d38;
 
       text-shadow: 5px 32px 2px rgba(200, 218, 241, 0.05);
-      backdrop-filter: blur(36px);
       margin: 8px;
       margin-bottom: 40px;
     }
@@ -388,7 +442,6 @@ export const SecondShot = styled.section`
 
     opacity: 0.9;
     text-shadow: 5px 32px 2px rgba(200, 218, 241, 0.05);
-    backdrop-filter: blur(36px);
   }
 `;
 

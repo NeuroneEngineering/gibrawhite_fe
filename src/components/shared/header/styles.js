@@ -9,6 +9,19 @@ export const HeaderWrapper = styled.header`
   width: 100%;
 
   padding: 0px 100px;
+  
+  #logo_container {
+    img {
+        width: 40px;
+        height: 40px;
+        opacity: 0.7;
+        
+        :hover {
+            cursor:pointer;
+            opacity: 1;
+        }
+    }
+  }
 
   #hamburger {
     display: none;
@@ -33,7 +46,7 @@ export const HeaderWrapper = styled.header`
     }
 
     #md_header {
-      display: ${({showHeader}) => showHeader ? 'block' : 'none'};
+      display: ${({ showHeader }) => showHeader ? 'block' : 'none'};
     }
 
     div {
@@ -43,11 +56,36 @@ export const HeaderWrapper = styled.header`
     #logo_container,
     #social_links {
       height: 50px;
+      width: 100px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
     }
   }
+    
+   #social_links {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: auto;
+      
+      img {
+        width: 18px;
+        height: 18px;
+        opacity: 0.8;
+        
+        :hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+      }
+    }
 
   #link_tags {
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
@@ -56,7 +94,7 @@ export const HeaderWrapper = styled.header`
     text-align: center;
 
     .active {
-      color: ${COLORS.primary};
+      color: ${COLORS.textDark};
       opacity: 1;
     }
 
@@ -64,8 +102,9 @@ export const HeaderWrapper = styled.header`
       text-decoration: none;
       font-family: Libre Baskerville;
       width: 100%;
-      color: ${COLORS.secondary};
+      color: ${COLORS.textSlate};
       opacity: 0.6;
+      font-size: 11px;
     }
 
     @media (max-width: 600px) {
@@ -83,20 +122,20 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const ULStyles = {
-  display: "flex",
-  flexFlow: "row nowrap",
-  justifyContent: "space-between",
-  alignItems: "center",
-  width: "500px",
-  listStyleType: "none",
-  margin: "0 auto",
-  lineHeight: "120px",
-  height: "100%",
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "500px",
+    listStyleType: "none",
+    margin: "0 auto",
+    lineHeight: "120px",
+    height: "100%",
 };
 
 export const LIStyles = {
-  padding: "0px 4px",
-  boxSizing: "border-box",
-  margin: "0px 8px",
-  fontFamily: "Libre Baskerville",
+    padding: "0px 4px",
+    boxSizing: "border-box",
+    margin: "0px 8px",
+    fontFamily: "Libre Baskerville",
 };

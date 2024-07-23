@@ -5,6 +5,7 @@ import Home from './Home'
 import { Main, MainStyle, PageWrapper } from './styles';
 
 const IndexPage = function ({props}) {
+    
     return <PageWrapper>
         <Header />
         <Main>
